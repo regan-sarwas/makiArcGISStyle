@@ -15,7 +15,7 @@ namespace makiArcGISStyle
   class Program
   {
     private static LicenseInitializer m_AOLicenseInitializer = new makiArcGISStyle.LicenseInitializer();
-    private static string baseGitPath = "C:\\Users\\<username>\\Documents\\GitHub\\maki\\"; //CORRECT THIS PATH
+    private static string baseGitPath = "C:\\Users\\resarwas\\Documents\\GitHub\\npmap-symbol-library\\"; //CORRECT THIS PATH
   
     [STAThread()]
     static void Main(string[] args)
@@ -30,11 +30,11 @@ namespace makiArcGISStyle
         return;
       }
 
-      string jsonPath = baseGitPath + "_includes\\maki.json";
-      string stylePath = baseGitPath + "ArcGIS\\maki.style";
-      string serverStylePath = baseGitPath + "ArcGIS\\maki.ServerStyle";
-      string renderPath = baseGitPath + "renders";
-      string emfPath = baseGitPath + "emf"; //you'll need to create these locally from the SVG via the bat file
+      string jsonPath = baseGitPath + "www\\standalone\\npmap-symbol-library.json";
+      string stylePath = baseGitPath + "ArcGIS\\npmaki.style";
+      string serverStylePath = baseGitPath + "ArcGIS\\npmaki.ServerStyle";
+      string renderPath = baseGitPath + "renders\\standalone";
+      string emfPath = baseGitPath + "emf\\standalone"; //you'll need to create these locally from the SVG via the bat file
       
       //do the Desktop style
       ImportMaki(jsonPath, stylePath, renderPath, emfPath);
@@ -64,7 +64,7 @@ namespace makiArcGISStyle
       IStyleGalleryItem2 styleGalleryItem = null;
       IStyleGalleryItem2 styleGalleryItemVector = null;
       string tags = "";
-      int[] sizes = {12,18,24};
+      int[] sizes = {16,24,32};
       int[] displays = {1,2};
 
       //the order here is mainly to produce a pleasing experience in ArcMap.  Add 96 dpi images at each size first
